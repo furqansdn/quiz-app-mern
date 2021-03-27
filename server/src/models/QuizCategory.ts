@@ -12,6 +12,6 @@ const quizCategorySchema = new mongoose.Schema(
 );
 
 export default mongoose.model<IQuizCategory>(
-  'QuizCategory',
+  'Quiz_Category',
   quizCategorySchema
 );
