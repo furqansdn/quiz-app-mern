@@ -18,7 +18,12 @@ export default async ({ expressApp }) => {
     model: require('../models/User').default,
   };
 
-  dependenciesInjections({ models: [userModels] });
+  const quizCategoryModels = {
+    name: 'quizCategoryModel',
+    model: require('../models/QuizCategory').default,
+  };
+
+  dependenciesInjections({ models: [userModels, quizCategoryModels] });
   logger.info('✌️ Dependency Injector loaded');
 
   /**
