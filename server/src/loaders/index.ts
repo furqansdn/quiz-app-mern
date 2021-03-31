@@ -28,8 +28,13 @@ export default async ({ expressApp }) => {
     model: require('../models/Quiz').default,
   };
 
+  const questionModels = {
+    name: 'questionModel',
+    model: require('../models/Question').default,
+  };
+
   dependenciesInjections({
-    models: [userModels, quizCategoryModels, quizModels],
+    models: [userModels, quizCategoryModels, quizModels, questionModels],
   });
   logger.info('✌️ Dependency Injector loaded');
 

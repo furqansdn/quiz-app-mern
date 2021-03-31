@@ -11,10 +11,9 @@ const quizSchema = new mongoose.Schema({
   timeLimit: {
     type: Number,
     required: [
-      // function (this: QuizDocument) {
-      //   return this.isLimit;
-      // },
-      true,
+      function (this: QuizDocument) {
+        return this.isLimit;
+      },
       'time limit is required',
     ],
   },

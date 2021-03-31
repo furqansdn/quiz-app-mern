@@ -12,5 +12,6 @@ export default (err: any, req: Request, res: Response, next: NextFunction) => {
       },
     });
   }
+  console.log(err.message);
   return res.status(500).json({ message: err.message, errors: err });
 };
